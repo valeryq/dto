@@ -1,4 +1,4 @@
-#Laravel array formatter similarity DTO from EloquentModel or EloquentCollection#
+#Laravel array formatter similarity DTO#
 
 ## Introduction
 
