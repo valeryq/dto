@@ -1,0 +1,23 @@
+{
+    "name": "valeryq/dto",
+    "description": "Laravel array formatter similarity DTO",
+    "authors": [
+        {
+            "name": "Valery Zakharchenko",
+            "email": "valprogramm@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/"
+        ],
+        "psr-0": {
+            "Valeryq\\DTO\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
