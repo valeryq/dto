@@ -21,7 +21,7 @@ class DTOServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app['dto'] = $this->app->share(function ($app) {
-            return new \Service\DTO;
+            return new \Valeryq\DTO\DTO;
         });
     }
 
