@@ -61,3 +61,21 @@ class UserController extends \BaseController
     }   
 }
 ```
+
+**Nested objects:**
+
+```php
+class UserController extends \BaseController 
+{
+    public function getUser() 
+    {
+        $user = UserModel::with('posts')->find(1);
+
+        return DTO::make($user)->only(['id', 'firstname', 'posts.id', 'posts.body']);
+
+        or
+     
+        return DTO::make($user)->except(['lastname', 'posts.body']);
+    }   
+}
+```
