@@ -9,7 +9,7 @@ Laravel can serialize EloquentModel or EloquentCollection to array, but it can't
 Require this package in your `composer.json` and update composer. This will download the package.
 
 ```php
-"valeryq/dto": "dev-master"
+"valeryq/dto": "1.0.0"
 ```
 
 After updating composer, add the ServiceProvider to the providers array in `app/config/app.php`
