@@ -37,7 +37,7 @@ class DTO
      */
     public function only(array $items)
     {
-        return $this->iterateItems(function ($value) use ($items) {
+        return $this->each(function ($value) use ($items) {
 
             $arrayOnly = [];
 
@@ -60,7 +60,7 @@ class DTO
      */
     public function except(array $items)
     {
-        return $this->iterateItems(function ($value) use ($items) {
+        return $this->each(function ($value) use ($items) {
 
             //Except values
             $arrayExceptedValues = array_except($value, $items);
@@ -78,7 +78,7 @@ class DTO
      * @param callable $callback
      * @return array
      */
-    private function iterateItems(\Closure $callback)
+    private function each(\Closure $callback)
     {
         if ($this->instance instanceof \Illuminate\Database\Eloquent\Collection) {
             return array_map($callback, $this->instance->toArray());
